@@ -18,11 +18,7 @@ func insertionSort(items []int) []int {
 }
 
 func bubbleSort(items []int) []int {
-	swapped := false
-
-	if len(items) <= 1 {
-		swapped = true
-	}
+	swapped := true
 
 	for swapped {
 		swapped = false
@@ -70,16 +66,18 @@ func merger(left, right []int) []int {
 
 func main() {
 	fmt.Println("---Starting sorts---")
-	list := []int{5, 2, 9, 1, 13}
+	insertList := []int{5, 2, 9, 1, 13}
+	bubbleList := []int{5, 2, 9, 1, 13}
+	mergeList := []int{5, 2, 9, 1, 13}
 
 	fmt.Println("---Insertion Sort---")
-	fmt.Println(insertionSort(list))
+	fmt.Println(insertionSort(insertList))
 
 	fmt.Println("---Bubble Sort---")
-	fmt.Println(bubbleSort(list))
+	fmt.Println(bubbleSort(bubbleList))
 
 	fmt.Println("---Merge Sort---")
-	fmt.Println(mergeSort(list))
+	fmt.Println(mergeSort(mergeList))
 
 	fmt.Println("")
 }
